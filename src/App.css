@@ -52,7 +52,7 @@
 .header {
   background: linear-gradient(to bottom, #ffffff 0%, #fafbfc 100%);
   border-bottom: 1px solid #e5e7eb;
-  padding: 3rem 2rem 2.5rem;
+  padding: 2rem 2rem ;
 }
 
 .header-content {
@@ -1027,8 +1027,8 @@
   align-items: center;
   justify-content: center;
   gap: 1.5rem;
-  padding: 2rem 0;
-  margin: 1rem 0;
+  padding: 0.5rem 0;
+  margin: 1.5rem 0;
 }
 
 .pagination-button {
