@@ -11,11 +11,25 @@ function App() {
   const [iconColor, setIconColor] = useState("#292D32");
   const [activeVariant, setActiveVariant] = useState("all");
   const [currentPage, setCurrentPage] = useState(1);
+
+  const [getVersion, setgetVersion] = useState(null);
+
   const [isDarkMode, setIsDarkMode] = useState(() => {
     const saved = localStorage.getItem("darkMode");
     return saved ? JSON.parse(saved) : false;
   });
   const iconsPerPage = 100;
+
+  useEffect(() => {
+    fetch("https://registry.npmjs.org/mx-icons")
+      .then(response => response.json())
+      .then(data => {
+        setgetVersion(data["dist-tags"].latest);
+        console.log(data["dist-tags"].latest);
+      })
+      .catch(err => console.error("Failed to load version", err));
+  }, []);
+
 
   useEffect(() => {
     localStorage.setItem("darkMode", JSON.stringify(isDarkMode));
@@ -25,6 +39,7 @@ function App() {
       document.documentElement.classList.remove("dark");
     }
   }, [isDarkMode]);
+
 
   const toggleDarkMode = () => setIsDarkMode(!isDarkMode);
 
@@ -136,7 +151,7 @@ function App() {
                 <img src="/mx-icons.png" alt="" />
               </div>
               <h1 className="logo-text">mxicons</h1>
-              <span className="version-badge">v1.0.10</span>
+              <span className="version-badge">v{getVersion}</span>
             </div>
             <div className="header-actions-top">
               <button
@@ -258,9 +273,8 @@ function App() {
           {allVariants.map((variant) => (
             <button
               key={variant}
-              className={`variant-tab ${
-                activeVariant === variant ? "active" : ""
-              }`}
+              className={`variant-tab ${activeVariant === variant ? "active" : ""
+                }`}
               onClick={() => setActiveVariant(variant)}
             >
               {variant.charAt(0).toUpperCase() + variant.slice(1)}
