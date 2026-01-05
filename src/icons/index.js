@@ -16586,3 +16586,4 @@ export const icons = [
   }
 ];
 export { RocketLinear, RocketBold, RocketMini } from './components/rocket';
+export { PlanetLinear, PlanetBold, PlanetMini } from './components/planet';
