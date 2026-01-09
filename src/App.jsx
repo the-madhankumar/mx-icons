@@ -16,8 +16,9 @@ function App() {
 
   const [isDarkMode, setIsDarkMode] = useState(() => {
     const saved = localStorage.getItem("darkMode");
+    const isManual = localStorage.getItem("darkModeManual") === "true";
 
-    if (saved !== null) {
+    if (saved !== null && isManual) {
       return JSON.parse(saved);
     }
 
@@ -51,7 +52,42 @@ function App() {
     }
   }, [isDarkMode]);
 
-  const toggleDarkMode = () => setIsDarkMode(!isDarkMode);
+  // Listen for system theme preference changes
+  useEffect(() => {
+    if (!window.matchMedia) return;
+
+    const mediaQuery = window.matchMedia("(prefers-color-scheme: dark)");
+    
+    const handleSystemThemeChange = (e) => {
+      const isManual = localStorage.getItem("darkModeManual") === "true";
+      
+      // Only update if user hasn't manually set a preference
+      if (!isManual) {
+        setIsDarkMode(e.matches);
+      }
+    };
+
+    // Modern browsers
+    if (mediaQuery.addEventListener) {
+      mediaQuery.addEventListener("change", handleSystemThemeChange);
+      return () => {
+        mediaQuery.removeEventListener("change", handleSystemThemeChange);
+      };
+    } 
+    // Fallback for older browsers
+    else if (mediaQuery.addListener) {
+      mediaQuery.addListener(handleSystemThemeChange);
+      return () => {
+        mediaQuery.removeListener(handleSystemThemeChange);
+      };
+    }
+  }, []);
+
+  const toggleDarkMode = () => {
+    setIsDarkMode(!isDarkMode);
+    // Mark as manually set when user toggles
+    localStorage.setItem("darkModeManual", "true");
+  };
 
   // Get all available variants
   const allVariants = useMemo(() => {
