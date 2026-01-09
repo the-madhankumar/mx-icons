@@ -1,5 +1,7 @@
 // Auto-generated icon library
 import Icon from "./Icon";
+import { variants as variantsRocket } from "./components/rocket";
+import { variants as variantsPlanet } from "./components/planet";
 
 import { variants as variantsIcon24SSupport } from "./components/icon-24-support";
 import { Icon24SSupportBold } from "./components/icon-24-support";
@@ -16583,6 +16585,16 @@ export const icons = [
     name: "telegram",
     slug: "telegram",
     variants: variantsTelegram,
+  },
+  {
+    name: "rocket",
+    slug: "rocket",
+    variants: variantsRocket,
+  },
+  {
+    name: "planet",
+    slug: "planet",
+    variants: variantsPlanet,
   }
 ];
 export { RocketLinear, RocketBold, RocketMini } from './components/rocket';
