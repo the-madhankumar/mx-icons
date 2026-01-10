@@ -1,4 +1,5 @@
 ﻿import { useMemo, useState, useEffect } from "react";
+import { Link, useLocation } from "react-router-dom";
 import "./App.css";
 import { icons as ICONS, CopyLinear, TickCircleLinear } from "./icons";
 import { matchesAlias } from "./icons/aliases";
@@ -13,6 +14,11 @@ function App() {
   const [currentPage, setCurrentPage] = useState(1);
 
   const [version, setVersion] = useState("");
+   const { pathname } = useLocation();
+
+    useEffect(() => {
+        window.scrollTo(0, 0);
+    }, [pathname]);
 
   const [isDarkMode, setIsDarkMode] = useState(() => {
     const saved = localStorage.getItem("darkMode");
@@ -251,6 +257,19 @@ function App() {
               </svg>
               Contribution
             </a>
+            <Link to="/installation" className="action-button secondary">
+              <svg
+                viewBox="0 0 24 24"
+                fill="none"
+                stroke="currentColor"
+                strokeWidth="2"
+                width="20"
+                height="20"
+              >
+                <path d="M7 8h10M7 12h4m1 8l-4-4H5a2 2 0 01-2-2V6a2 2 0 012-2h14a2 2 0 012 2v8a2 2 0 01-2 2h-3l-4 4z" />
+              </svg>
+              Get Started
+            </Link>
             {/* <button className="action-button secondary">
               <svg
                 viewBox="0 0 24 24"
@@ -283,9 +302,8 @@ function App() {
           {allVariants.map((variant) => (
             <button
               key={variant}
-              className={`variant-tab ${
-                activeVariant === variant ? "active" : ""
-              }`}
+              className={`variant-tab ${activeVariant === variant ? "active" : ""
+                }`}
               onClick={() => setActiveVariant(variant)}
             >
               {variant.charAt(0).toUpperCase() + variant.slice(1)}
@@ -408,9 +426,8 @@ function App() {
                 <h3>How to use</h3>
                 <pre>
                   <button
-                    className={`code-copy-btn ${
-                      copiedIcon === "code" ? "copied" : ""
-                    }`}
+                    className={`code-copy-btn ${copiedIcon === "code" ? "copied" : ""
+                      }`}
                     data-tooltip="Copy to clipboard"
                     onClick={() =>
                       copyCode(
@@ -459,9 +476,8 @@ function App() {
                   </code>
                 </pre>
                 <button
-                  className={`copy-button ${
-                    copiedIcon === "code" ? "copied" : ""
-                  }`}
+                  className={`copy-button ${copiedIcon === "code" ? "copied" : ""
+                    }`}
                   onClick={() =>
                     copyCode(
                       `import { ${selectedIcon.componentName} } from 'mx-icons'\n\n<${selectedIcon.componentName} size={${iconSize}} color="${iconColor}" />`
