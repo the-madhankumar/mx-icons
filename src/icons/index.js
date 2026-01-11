@@ -2727,6 +2727,12 @@ import { GoogleAnalyticsBold } from "./components/google-analytics";
 import { GoogleAnalyticsLinear } from "./components/google-analytics";
 import { GoogleAnalyticsTwoTone } from "./components/google-analytics";
 
+import { variants as variantsGmail } from "./components/gmail";
+import { GmailBold } from "./components/gmail";
+import { GmailLinear } from "./components/gmail";
+import { GmailTwoTone } from "./components/gmail";
+import { GmailBroken } from "./components/gmail";
+
 import { variants as variantsGrammerly } from "./components/grammerly";
 import { GrammerlyBold } from "./components/grammerly";
 import { GrammerlyBroken } from "./components/grammerly";
@@ -8743,6 +8749,10 @@ export {
   GoogleAnalyticsBold,
   GoogleAnalyticsLinear,
   GoogleAnalyticsTwoTone,
+  GmailBold,
+  GmailLinear,
+  GmailTwoTone,
+  GmailBroken,
   GrammerlyBold,
   GrammerlyBroken,
   GrammerlyBulk,
@@ -13829,6 +13839,11 @@ export const icons = [
     name: "Google Analytics",
     slug: "google-analytics",
     variants: variantsGoogleAnalytics,
+  },
+  {
+    name: "Gmail",
+    slug: "gmail",
+    variants: variantsGmail,
   },
   {
     name: "grammerly",
