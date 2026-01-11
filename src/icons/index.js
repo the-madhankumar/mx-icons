@@ -2701,6 +2701,12 @@ import { GpsBulk } from "./components/gps";
 import { GpsLinear } from "./components/gps";
 import { GpsOutline } from "./components/gps";
 import { GpsTwotone } from "./components/gps";
+import { GoogleBold } from "./components/google";
+import { GoogleLinear } from "./components/google";
+import { GoogleBulk } from "./components/google";
+import { GoogleBroken } from "./components/google";
+import { variants as variantsGoogle } from "./components/google";
+
 import { variants as variantsGrammerly } from "./components/grammerly";
 import { GrammerlyBold } from "./components/grammerly";
 import { GrammerlyBroken } from "./components/grammerly";
@@ -8701,6 +8707,10 @@ export {
   GpsLinear,
   GpsOutline,
   GpsTwotone,
+  GoogleBold,
+  GoogleLinear,
+  GoogleBulk,
+  GoogleBroken,
   GrammerlyBold,
   GrammerlyBroken,
   GrammerlyBulk,
@@ -13762,6 +13772,11 @@ export const icons = [
     name: "gps",
     slug: "gps",
     variants: variantsGps,
+  },
+  {
+    name: "google",
+    slug: "google",
+    variants: variantsGoogle,
   },
   {
     name: "grammerly",
