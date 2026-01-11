@@ -2707,6 +2707,13 @@ import { GoogleBulk } from "./components/google";
 import { GoogleBroken } from "./components/google";
 import { variants as variantsGoogle } from "./components/google";
 
+import { variants as variantsGoogleLens } from "./components/google-lens";
+import { GoogleLensBold } from "./components/google-lens";
+import { GoogleLensBroken } from "./components/google-lens";
+import { GoogleLensBulk } from "./components/google-lens";
+import { GoogleLensLinear } from "./components/google-lens";
+import { GoogleLensTwoTone } from "./components/google-lens";
+
 import { variants as variantsGrammerly } from "./components/grammerly";
 import { GrammerlyBold } from "./components/grammerly";
 import { GrammerlyBroken } from "./components/grammerly";
@@ -8711,6 +8718,10 @@ export {
   GoogleLinear,
   GoogleBulk,
   GoogleBroken,
+  GoogleLensBold,
+  GoogleLensLinear,
+  GoogleLensTwoTone,
+  GoogleLensBroken,
   GrammerlyBold,
   GrammerlyBroken,
   GrammerlyBulk,
@@ -13777,6 +13788,11 @@ export const icons = [
     name: "google",
     slug: "google",
     variants: variantsGoogle,
+  },
+  {
+    name: "google-lens",
+    slug: "google-lens",
+    variants: variantsGoogleLens,
   },
   {
     name: "grammerly",
