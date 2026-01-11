@@ -2718,6 +2718,11 @@ import {GooglePlayBroken} from "./components/google-play";
 import {GooglePlayLinear} from "./components/google-play";
 import {variants as variantsGooglePlay} from "./components/google-play";
 
+import {GoogleDriveBold} from "./components/google-drive";
+import {GoogleDriveBroken} from "./components/google-drive";
+import {GoogleDriveLinear} from "./components/google-drive";
+import {variants as variantsGoogleDrive} from "./components/google-drive";
+
 import { variants as variantsGrammerly } from "./components/grammerly";
 import { GrammerlyBold } from "./components/grammerly";
 import { GrammerlyBroken } from "./components/grammerly";
@@ -8729,6 +8734,9 @@ export {
   GooglePlayBold,
   GooglePlayBroken,
   GooglePlayLinear,
+  GoogleDriveBold,
+  GoogleDriveBroken,
+  GoogleDriveLinear,
   GrammerlyBold,
   GrammerlyBroken,
   GrammerlyBulk,
@@ -13805,6 +13813,11 @@ export const icons = [
     name: "google-play",
     slug: "google-play",
     variants: variantsGooglePlay,
+  },
+  {
+    name: "google-drive",
+    slug: "google-drive",
+    variants: variantsGoogleDrive,
   },
   {
     name: "grammerly",
