@@ -1,7 +1,6 @@
 import GoogleDriveBold from "./GoogleDriveBold";
 import GoogleDriveLinear from "./GoogleDriveLinear";
 import GoogleDriveTwoTone from "./GoogleDriveTwoTone";
-import GoogleDriveBroken from "./GoogleDriveBroken";
 
 export {
   GoogleDriveBold,

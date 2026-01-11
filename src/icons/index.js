@@ -2713,15 +2713,19 @@ import { GoogleLensBroken } from "./components/google-lens";
 import { GoogleLensLinear } from "./components/google-lens";
 import { GoogleLensTwoTone } from "./components/google-lens";
 
-import {GooglePlayBold} from "./components/google-play";
-import {GooglePlayBroken} from "./components/google-play";
-import {GooglePlayLinear} from "./components/google-play";
-import {variants as variantsGooglePlay} from "./components/google-play";
+import { GooglePlayBold } from "./components/google-play";
+import { GooglePlayBroken } from "./components/google-play";
+import { GooglePlayLinear } from "./components/google-play";
+import { variants as variantsGooglePlay } from "./components/google-play";
 
-import {GoogleDriveBold} from "./components/google-drive";
-import {GoogleDriveBroken} from "./components/google-drive";
-import {GoogleDriveLinear} from "./components/google-drive";
-import {variants as variantsGoogleDrive} from "./components/google-drive";
+import { GoogleDriveBold } from "./components/google-drive";
+import { GoogleDriveLinear } from "./components/google-drive";
+import { variants as variantsGoogleDrive } from "./components/google-drive";
+
+import { variants as variantsGoogleAnalytics } from "./components/google-analytics";
+import { GoogleAnalyticsBold } from "./components/google-analytics";
+import { GoogleAnalyticsLinear } from "./components/google-analytics";
+import { GoogleAnalyticsTwoTone } from "./components/google-analytics";
 
 import { variants as variantsGrammerly } from "./components/grammerly";
 import { GrammerlyBold } from "./components/grammerly";
@@ -8735,8 +8739,10 @@ export {
   GooglePlayBroken,
   GooglePlayLinear,
   GoogleDriveBold,
-  GoogleDriveBroken,
   GoogleDriveLinear,
+  GoogleAnalyticsBold,
+  GoogleAnalyticsLinear,
+  GoogleAnalyticsTwoTone,
   GrammerlyBold,
   GrammerlyBroken,
   GrammerlyBulk,
@@ -13820,6 +13826,11 @@ export const icons = [
     variants: variantsGoogleDrive,
   },
   {
+    name: "Google Analytics",
+    slug: "google-analytics",
+    variants: variantsGoogleAnalytics,
+  },
+  {
     name: "grammerly",
     slug: "grammerly",
     variants: variantsGrammerly,
@@ -16663,7 +16674,7 @@ export const icons = [
     name: "planet",
     slug: "planet",
     variants: variantsPlanet,
-  }
+  },
 ];
-export { RocketLinear, RocketBold, RocketMini } from './components/rocket';
-export { PlanetLinear, PlanetBold, PlanetMini } from './components/planet';
+export { RocketLinear, RocketBold, RocketMini } from "./components/rocket";
+export { PlanetLinear, PlanetBold, PlanetMini } from "./components/planet";
