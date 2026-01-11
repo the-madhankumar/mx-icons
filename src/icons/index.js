@@ -2733,6 +2733,15 @@ import { GmailLinear } from "./components/gmail";
 import { GmailTwoTone } from "./components/gmail";
 import { GmailBroken } from "./components/gmail";
 
+import { variants as variantsGooglePay } from "./components/google-pay";
+import { GooglePayBold } from "./components/google-pay";
+import { GooglePayTwoTone } from "./components/google-pay";
+
+import { variants as variantsAndroid } from "./components/android";
+import { AndroidBold } from "./components/android";
+import { AndroidLinear } from "./components/android";
+import { AndroidTwoTone } from "./components/android";
+
 import { variants as variantsGrammerly } from "./components/grammerly";
 import { GrammerlyBold } from "./components/grammerly";
 import { GrammerlyBroken } from "./components/grammerly";
@@ -8753,6 +8762,11 @@ export {
   GmailLinear,
   GmailTwoTone,
   GmailBroken,
+  GooglePayBold,
+  GooglePayTwoTone,
+  AndroidBold,
+  AndroidLinear,
+  AndroidTwoTone,
   GrammerlyBold,
   GrammerlyBroken,
   GrammerlyBulk,
@@ -13844,6 +13858,16 @@ export const icons = [
     name: "Gmail",
     slug: "gmail",
     variants: variantsGmail,
+  },
+  {
+    name: "Google Pay",
+    slug: "google-pay",
+    variants: variantsGooglePay,
+  },
+  {
+    name: "Android",
+    slug: "android",
+    variants: variantsAndroid,
   },
   {
     name: "grammerly",
