@@ -73,7 +73,7 @@ function App() {
         console.log("[DEBUG] Github Stars : ", currentGitStars);
         setgitForks(currentGitForks)
         console.log("[DEBUG] Github Forks : ", currentGitForks);
-      })
+      }).catch((err) => console.error("Failed to load version", err));
   })
 
   useEffect(() => {
