@@ -1200,6 +1200,21 @@ a.github-link:hover .github-card {
     align-items: flex-start;
     gap: 1rem;
   }
+
+  .repo-name {
+    font-size: 0.65rem;
+    font-weight: 500;
+  }
+
+  .github-card {
+    display: flex;
+    align-items: center;
+    gap: 0.4rem;
+    padding: 0.25rem 0.6rem;
+    border-radius: 6px;
+    width: 150px;
+    border: 1px solid transparent;
+  }
 }
 
 @media (max-width: 480px) {
