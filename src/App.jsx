@@ -46,7 +46,6 @@ function App() {
         const latestVersion =
           data?.distTags?.latest || data?.["dist-tags"]?.latest || "";
         setVersion(latestVersion);
-        console.log(latestVersion);
       })
       .catch((err) => console.error("Failed to load version", err));
   }, []);
